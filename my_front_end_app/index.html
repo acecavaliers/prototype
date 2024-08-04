@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h2>Lou Geh Mfg. Co.</h2>
+            <nav>
+                <ul>
+                    <li><a href="#" data-url="http://localhost:5000/api/supplier">Supplier</a></li>
+                    <li><a href="#" data-url="http://localhost:5000/api/component">Components</a></li>
+                    <li><a href="#" data-url="http://localhost:5000/api/product">Product List</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Create New Component Form -->
+    <div id="create-component" class="form-container" style="display: none;">
+        <h2>Create New Component</h2>
+        <form id="component-form">
+            <label for="component-name">Name:</label>
+            <input type="text" id="component-name" name="name" required>
+            <label for="component-description">Description:</label>
+            <input type="text" id="component-description" name="description" required>
+            <div id="supplier-checkboxes"></div>
+            <button type="submit">Create Component</button>
+        </form>
+    </div>
+
+    <!-- Create New Supplier Form -->
+    <div id="create-supplier" class="form-container" style="display: none;">
+        <h2>Create New Supplier</h2>
+        <form id="supplier-form">
+            <input type="hidden" id="supplier-id" value="">
+            <label for="supplier-name">Name:</label>
+            <input type="text" id="supplier-name" name="name" required>
+            <button type="submit" id="submit-supplier">Create Supplier</button>
+        </form>
+    </div>
+
+    <!-- Create New Product Form -->
+    <div id="create-product" class="form-container" style="display: none;">
+        <h2>Create New Product</h2>
+        <form id="product-form">
+            <input type="hidden" id="product-id" value="">
+            <label for="product-name">Name:</label>
+            <input type="text" id="product-name" name="name" required>
+            <label for="product-quantity">Quantity on hand:</label>
+            <input type="number" id="product-quantity" name="quantity_on_hand" required>
+            <div id="component-checkboxes"></div>
+            <button type="submit" id="submit-button">Create Product</button>
+        </form>
+        <div id="error-message" style="color: red;"></div>
+    </div>
+    <hr>
+    <h1>Product List</h1>
+    <div id="data-container"></div>
+    <script src="js/app.js"></script>
+</body>
+</html>
