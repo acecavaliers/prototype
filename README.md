@@ -1,9 +1,9 @@
 # prototype
- 
+
 navigate to my_rest_api directory
 cd my_rest_api
 
-Install 
+Install
 
 Steps to install project
 User can buy and sell their project online
@@ -19,7 +19,7 @@ Step 2 Paste the codes below:
         APP_PORT=5000
 
         DB_USERNAME=root
-        DB_PASSWORD=''
+        DB_PASSWORD=(yourpassword)
         DB_NAME=my_rest_api
         DB_HOST=localhost
         DB_PORT=3306
